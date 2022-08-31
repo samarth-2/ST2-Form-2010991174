@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body{
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.outer{
+    margin:0px;
+    background-color: white;
+    height:100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.inner{
+    color: white;
+    background: linear-gradient(to right, #0f2027, #203a43, #647f8a);
+    width: 70%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top:20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.header{
+    font-size: 7vh;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.innerblock{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 4rem;
+    width:100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.inner__left{
+    width:25%;
+    height:100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+.inner__right{
+    width:75%;
+    height:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inner_right_check{
+    width:75%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items: flex-start;
+}
+.text__area{
+    height: 70px;
+    width: 200px;
+} 
+.other__option{
+    width: 100px;
+    height:20px;
+}
+.input__all{
+    width:30%;
+}
+.inner_right_table{
+    width:75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex;
+    align-items: center;
+}
+.innerblock__table{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.inner_left_table{
+    width:20%;
+    height:100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    /* padding-left: 20px; */
+
+}
+td{
+    min-width: 3rem;
+    text-align: center;
+    padding: 5px;
+}
+th{
+    min-width: 3rem;
+    padding: 5px;
+}
+.innerblock__button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 4rem;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

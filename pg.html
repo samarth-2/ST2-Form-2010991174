@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+            .pg__outer{
+                width:100%;
+                height: 100%;
+                display: flex;
+                flex-direction:row;
+                justify-content:center;
+                align-items: center;
+            }
+            .pg__inner{
+                width:70%;
+                height:fit-content;
+                border-radius:10px;
+                /* background-image:linear-gradient(to bottom right, pink, rgb(69, 69, 210)); */
+                background: linear-gradient(to right, #0f2027, #203a43, #647f8a);
+            }
+            .pg__block{
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                /* border: 1px solid black; */
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: white;
+            }
+            .pg__block__left{
+                padding-left:10px;
+                width: 25%;
+                height: fit-content;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .pg__block__right{
+                
+                width: 75%;
+                height: 50px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pg__outer">
+            <div class="pg__inner">
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        FIRST NAME
+                    </div>
+                    <div class="pg__block__right" id="h0">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        LAST NAME
+                    </div>
+                    <div class="pg__block__right" id="h1">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        DOB
+                    </div>
+                    <div class="pg__block__right" id="h4">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        EMAIL
+                    </div>
+                    <div class="pg__block__right" id="h5">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        PHONE NUMBER
+                    </div>
+                    <div class="pg__block__right" id="h6">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        GENDER
+                    </div>
+                    <div class="pg__block__right" id="h7">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        ADDRESS
+                    </div>
+                    <div class="pg__block__right" id="h8">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        CITY
+                    </div>
+                    <div class="pg__block__right" id="h9">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                       PINCODE
+                    </div>
+                    <div class="pg__block__right" id="h10">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        STATE
+                    </div>
+                    <div class="pg__block__right" id="h11">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        COUNTRY
+                    </div>
+                    <div class="pg__block__right" id="h12">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        HOBBIES
+                    </div>
+                    <div class="pg__block__right" id="h13">
+                        
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        QUALIFICATIONS
+                    </div>
+                    <div class="pg__block__right" style="flex-direction:column;justify-content:center;align-items:flex-start;height:fit-content;">
+                        
+                        <div id="h15">
+                            X
+                        </div>
+                        <div id="h16">
+                            XII
+                        </div>
+                        <div id="h17">
+                            GRADUATION
+                        </div>
+                        <div id="h18">
+                            MASTERS
+                        </div>
+                    </div>
+                </div>
+                <div class="pg__block">
+                    <div class="pg__block__left">
+                        COURSE
+                    </div>
+                    <div class="pg__block__right" id="h19">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener('load',()=>{
+                var res = JSON.parse(localStorage.getItem("data"));
+                console.log(res)    
+                
+                var li=[res.name.firstName,res.name.lastname,
+                res.dob.day,res.dob.month,res.dob.year,
+                res.email,res.phone,res.gender,res.address,res.city,
+                res.pincode,res.state,res.country,res.hobbies,res.hobbie_field,
+                res.qualifications.classX,res.qualifications.classXII,res.qualifications.graduation,res.qualifications.masters,
+                res.applied];
+                console.log(li);
+                var d="";
+                for(var i=0;i<14;i++)
+                {   if( i==2 || i==3 || i==4 ){
+                        if(i==4){
+                            d= d+" "+li[i].toString();
+                            let s="h"+i.toString();
+                            
+                            document.getElementById(s).textContent=d;
+                        }
+                        else{
+                            d= d+" "+li[i].toString();
+                        }
+                    }
+                    else if(i==6 || i==10){
+                        let b="h"+i.toString();
+                    
+                    document.getElementById(b).textContent=li[i].toString();
+                    }
+                    else{
+                    let s="h"+i.toString();
+                    console.log(s)
+                    document.getElementById(s).textContent=li[i];
+                    }
+                }
+                document.getElementById("h13").textContent=li[13];
+                document.getElementById("h13").textContent+=" : "+li[14];
+                document.getElementById("h15").textContent+="  " +li[15].join(" ");
+                document.getElementById("h16").textContent+="  " +li[16].join(" ");
+                document.getElementById("h17").textContent+="  " +li[17].join(" ");
+                document.getElementById("h18").textContent+="  " +li[18].join(" ");
+                document.getElementById("h19").textContent=li[19];
+            })
+        </script>
+    </body>
+</html>
